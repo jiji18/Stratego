@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="racine" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="562.0" prefWidth="907.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="vues.PlacementVue">
+
+    <ToolBar prefHeight="8.0" prefWidth="907.0">
+        <Button mnemonicParsing="false" onAction="#abandonnerPartie" text="Abandonner"/>
+    </ToolBar>
+    <HBox prefHeight="483.0" prefWidth="907.0">
+        <Pane prefHeight="483.0" prefWidth="105.0"/>
+        <Pane fx:id="ecranGrille" prefHeight="483.0" prefWidth="512.0">
+
+        </Pane>
+        <Pane prefHeight="483.0" prefWidth="97.0"/>
+        <Pane fx:id="ecranPionsAPlacer" prefHeight="483.0" prefWidth="262.0">
+
+        </Pane>
+        <Pane prefHeight="483.0" prefWidth="85.0"/>
+    </HBox>
+
+    <ToolBar prefHeight="40.0" prefWidth="200.0">
+        <Pane prefHeight="28.0" prefWidth="106.0"/>
+        <Button fx:id="btnRandom" mnemonicParsing="false" onAction="#placementALeatoire" text="Random"/>
+        <Pane prefHeight="0.0" prefWidth="489.0"/>
+        <Button mnemonicParsing="false" onAction="#resetGrilles" text="Annuler"/>
+        <Button fx:id="btnEnvoyer" mnemonicParsing="false" onAction="#envoyerValeur" text="Valider"/>
+    </ToolBar>
+
+</VBox>

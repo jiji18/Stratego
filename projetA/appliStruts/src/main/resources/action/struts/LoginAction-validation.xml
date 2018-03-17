@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE validators PUBLIC
+        "-//Apache Struts//XWork Validator 1.0.2//EN"
+        "http://struts.apache.org/dtds/xwork-validator-1.0.2.dtd">
+<validators>
+    <field name="identifiant">
+        <field-validator type="requiredstring">
+            <message key="register.error.id.empty"/>
+        </field-validator>
+    </field>
+    <field name="motDePasse">
+        <field-validator type="requiredstring">
+            <message key="register.error.mdp.empty"/>
+        </field-validator>
+    </field>
+</validators>

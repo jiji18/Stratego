@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox fx:id="racine" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="251.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.112-ea"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="vues.ConnexionVue">
+    <children>
+        <BorderPane prefHeight="198.0" prefWidth="600.0">
+            <center>
+                <GridPane prefHeight="138.0" prefWidth="460.0" BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="308.0" minWidth="10.0" prefWidth="102.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="487.0" minWidth="10.0" prefWidth="358.0"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="108.0" minHeight="10.0" prefHeight="96.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="142.0" minHeight="10.0" prefHeight="106.0" vgrow="SOMETIMES"/>
+                    </rowConstraints>
+                    <children>
+                        <Label text="Identifiant"/>
+                        <TextField fx:id="identifiant" GridPane.columnIndex="1"/>
+                        <Label text="Mot de passe" GridPane.rowIndex="1"/>
+                        <PasswordField fx:id="motDePasse" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                    </children>
+                </GridPane>
+            </center>
+            <right>
+                <Pane prefHeight="141.0" prefWidth="71.0" BorderPane.alignment="CENTER"/>
+            </right>
+            <left>
+                <Pane prefHeight="169.0" prefWidth="69.0" BorderPane.alignment="CENTER"/>
+            </left>
+            <bottom>
+                <GridPane prefHeight="46.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    </rowConstraints>
+                    <children>
+                        <Button id="connexion" fx:id="connexion" mnemonicParsing="false" onAction="#connexion"
+                                prefHeight="31.0" prefWidth="310.0" text="Connexion" GridPane.columnIndex="2"
+                                GridPane.rowIndex="1"/>
+                        <Button id="runInscription" fx:id="runInscription" mnemonicParsing="false" onAction="#runInscription"
+                                prefHeight="31.0" prefWidth="310.0" text="Inscription" GridPane.columnIndex="3"
+                                GridPane.rowIndex="1"/>
+                    </children>
+                </GridPane>
+            </bottom>
+            <top>
+                <Pane prefHeight="48.0" prefWidth="600.0" BorderPane.alignment="CENTER"/>
+            </top>
+        </BorderPane>
+    </children>
+</VBox>

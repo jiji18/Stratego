@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
+    <constant name="struts.devMode" value="true"/>
+    <constant name="struts.custom.i18n.resources" value="ApplicationRessources"/>
+
+    <!-- package JSON -->
+    <package name="json" namespace="/json" extends="json-default">
+        <action name="loadData" class="action.ajax.LoadDataAction">
+            <result type="json"/>
+        </action>
+
+        <action name="joinPart" class="action.ajax.JoinPartAction">
+            <result type="json"/>
+        </action>
+
+        <action name="observePart" class="action.ajax.ObservePartAction">
+            <result type="json"/>
+        </action>
+
+        <action name="createPart" class="action.ajax.CreatePartAction">
+            <result type="json"/>
+        </action>
+
+        <action name="declinePart" class="action.ajax.DeclineAction">
+            <result type="json"/>
+        </action>
+
+        <action name="removePart" class="action.ajax.RemovePartAction">
+            <result type="json"/>
+        </action>
+
+        <action name="loadPlay" class="action.ajax.LoadPlayAction">
+            <result type="json"/>
+        </action>
+
+        <action name="loadAbandon" class="action.ajax.LoadAbandonAction">
+            <result type="json"/>
+        </action>
+
+        <action name="loadNotPlay" class="action.ajax.NotPlayAction">
+            <result type="json"/>
+        </action>
+
+        <action name="canMove" class="action.ajax.DeplacementPossibleAction">
+            <result type="json"/>
+        </action>
+
+        <action name="deplacerPion" class="action.ajax.DeplacerPionAction">
+            <result type="json"/>
+        </action>
+    </package>
+
+</struts>

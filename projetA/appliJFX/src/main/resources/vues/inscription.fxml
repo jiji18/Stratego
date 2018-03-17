@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<VBox fx:id="inscription" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+      minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.76-ea"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="vues.InscriptionVue">
+    <children>
+        <Label prefHeight="17.0" prefWidth="44.0" text="LOGIN"/>
+        <TextField fx:id="pseudo"/>
+        <Label text="MOT DE PASSE"/>
+        <PasswordField fx:id="mdp"/>
+        <Label text="CONFIRMATION MOT DE PASSE"/>
+        <PasswordField fx:id="confirmation"/>
+        <Button onAction="#validerInscription" text="Valider Inscription"/>
+    </children>
+</VBox>

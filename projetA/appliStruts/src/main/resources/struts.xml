@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
+    <constant name="struts.devMode" value="false"/>
+    <constant name="struts.custom.i18n.resources" value="ApplicationRessources"/>
+
+    <!-- package struts -->
+    <package name="default" namespace="/" extends="struts-default">
+
+        <default-action-ref name="index"/>
+
+        <action name="redirectAccess" class="action.struts.verifAccessAction">
+            <result name="INCONNU">/WEB-INF/vues/index.jsp</result>
+            <result name="CONNECTED">/WEB-INF/vues/lobby.jsp</result>
+            <result name="WAITINGPLAYER">/WEB-INF/vues/lobby.jsp</result>
+            <result name="WAITINGPLAY">/WEB-INF/vues/notPlay.jsp</result>
+            <result name="OBSERVING">/WEB-INF/vues/notPlay.jsp</result>
+            <result name="PLAYING">/WEB-INF/vues/play.jsp</result>
+        </action>
+
+        <action name="index" class="action.struts.verifAccessAction">
+            <result name="INCONNU">/WEB-INF/vues/index.jsp</result>
+            <result name="CONNECTED">/WEB-INF/vues/lobby.jsp</result>
+            <result name="WAITINGPLAYER">/WEB-INF/vues/lobby.jsp</result>
+            <result name="WAITINGPLAY">/WEB-INF/vues/notPlay.jsp</result>
+            <result name="OBSERVING">/WEB-INF/vues/notPlay.jsp</result>
+            <result name="PLAYING">/WEB-INF/vues/play.jsp</result>
+        </action>
+
+        <action name="gotoRegister" class="action.struts.verifAccessAction">
+            <result name="INCONNU">/WEB-INF/vues/register.jsp</result>
+            <result name="CONNECTED">/WEB-INF/vues/lobby.jsp</result>
+            <result name="WAITINGPLAYER">/WEB-INF/vues/lobby.jsp</result>
+            <result name="WAITINGPLAY">/WEB-INF/vues/notPlay.jsp</result>
+            <result name="OBSERVING">/WEB-INF/vues/notPlay.jsp</result>
+            <result name="PLAYING">/WEB-INF/vues/play.jsp</result>
+        </action>
+
+        <action name="gotoLogin" class="action.struts.verifAccessAction">
+            <result name="INCONNU">/WEB-INF/vues/login.jsp</result>
+            <result name="CONNECTED">/WEB-INF/vues/lobby.jsp</result>
+            <result name="WAITINGPLAYER">/WEB-INF/vues/lobby.jsp</result>
+            <result name="WAITINGPLAY">/WEB-INF/vues/notPlay.jsp</result>
+            <result name="OBSERVING">/WEB-INF/vues/notPlay.jsp</result>
+            <result name="PLAYING">/WEB-INF/vues/play.jsp</result>
+        </action>
+
+        <action name="login" class="action.struts.LoginAction">
+            <result name="success" type="redirectAction">
+                <param name="actionName">redirectAccess</param>
+                <param name="namespace">/</param>
+            </result>
+            <result name="input">
+                /WEB-INF/vues/login.jsp
+            </result>
+            <result name="error">
+                /WEB-INF/vues/login.jsp
+            </result>
+        </action>
+
+        <action name="register" class="action.struts.RegisterAction">
+            <result name="success" type="redirectAction">
+                <param name="actionName">redirectAccess</param>
+                <param name="namespace">/</param>
+            </result>
+            <result name="input">
+                /WEB-INF/vues/register.jsp
+            </result>
+        </action>
+
+        <action name="account" class="action.struts.AccountAction">
+            <result name="success" type="redirectAction">
+                <param name="actionName">redirectAccess</param>
+                <param name="namespace">/</param>
+            </result>
+            <result name="input">
+                /WEB-INF/vues/lobby.jsp
+            </result>
+        </action>
+
+        <action name="logout" class="action.struts.LogoutAction">
+            <result name="success" type="redirectAction">
+                <param name="actionName">redirectAccess</param>
+                <param name="namespace">/</param>
+            </result>
+        </action>
+
+        <action name="goToPlacerPion" class="action.struts.verifAccessAction">
+            <result name="INCONNU">/WEB-INF/vues/login.jsp</result>
+            <result name="CONNECTED">/WEB-INF/vues/lobby.jsp</result>
+            <result name="WAITINGPLAYER">/WEB-INF/vues/lobby.jsp</result>
+            <result name="WAITINGPLAY">/WEB-INF/vues/notPlacePion.jsp</result>
+            <result name="OBSERVING">/WEB-INF/vues/notPlay.jsp</result>
+            <result name="PLAYING">/WEB-INF/vues/placePion.jsp</result>
+        </action>
+
+        <action name="goToPlay">
+            <result type="redirectAction">
+                <param name="actionName">redirectAccess</param>
+                <param name="namespace">/</param>
+            </result>
+        </action>
+
+        <action name="abandonner" class="action.struts.AbandonnerAction">
+            <result name="success" type="redirectAction">
+                <param name="actionName">redirectAccess</param>
+                <param name="namespace">/</param>
+            </result>
+            <result name="input">/WEB-INF/vues/lobby.jsp</result>
+        </action>
+
+        <action name="placerPion" class="action.struts.PlacerPionAction">
+            <result name="notPlacerPion">/WEB-INF/vues/notPlacePion.jsp</result>
+            <result name="notPlay">/WEB-INF/vues/notPlay.jsp</result>
+        </action>
+
+        <action name="goToLobby">
+            <result type="redirectAction">
+                <param name="actionName">redirectAccess</param>
+                <param name="namespace">/</param>
+            </result>
+        </action>
+
+        <action name="quitterObservation" class="action.struts.QuitterObservationAction">
+            <result name="success" type="redirectAction">
+                <param name="actionName">redirectAccess</param>
+                <param name="namespace">/</param>
+            </result>
+            <result name="input">/WEB-INF/vues/lobby.jsp</result>
+        </action>
+
+        <action name="passerSonTour" class="action.struts.PasserSonTourAction">
+            <result name="success" type="redirectAction">
+                <param name="actionName">redirectAccess</param>
+                <param name="namespace">/</param>
+            </result>
+            <result name="input">/WEB-INF/vues/lobby.jsp</result>
+        </action>
+
+    </package>
+
+    <include file="struts-json.xml"></include>
+
+    <!-- Add addition packages and configuration here. -->
+</struts>

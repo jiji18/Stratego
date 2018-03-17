@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<BorderPane fx:id="racine" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.112-ea"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="vues.FenetrePrincipale">
+    <top>
+        <Label text="STRATEGO" textAlignment="CENTER" BorderPane.alignment="CENTER">
+            <font>
+                <Font size="37.0"/>
+            </font>
+        </Label>
+    </top>
+</BorderPane>

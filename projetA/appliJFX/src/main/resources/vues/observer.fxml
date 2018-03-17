@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="racine" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="562.0" prefWidth="907.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vues.ObserverVue">
+
+    <ToolBar prefHeight="8.0" prefWidth="907.0">
+        <items>
+            <Button fx:id="quitterButton" mnemonicParsing="false" text="Quitter"/>
+        </items></ToolBar>
+
+    <HBox prefHeight="483.0" prefWidth="907.0">
+        <Pane prefHeight="483.0" prefWidth="105.0" />
+        <Pane fx:id="ecranNotJouer" prefHeight="483.0" prefWidth="512.0" />
+    </HBox>
+
+</VBox>

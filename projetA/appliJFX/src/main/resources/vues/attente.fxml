@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+<VBox fx:id="racine" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.112-ea"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="vues.AttenteVue">
+    <children>
+        <Button fx:id="retour" mnemonicParsing="false" onAction="#abandonner" prefHeight="31.0" prefWidth="310.0" text="Abandonner" />
+    </children>
+</VBox>
